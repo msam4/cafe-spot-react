@@ -1,7 +1,8 @@
 import React from 'react';
 import './Searchbar.css';
 
-function Searchbar(setCafes) {
+function Searchbar({setCafes}) {
+
   function handleChange(event) {
     console.log(event.currentTarget.value);
     const keyword = event.currentTarget.value;
@@ -19,7 +20,6 @@ function Searchbar(setCafes) {
       <span className="input-group-text"><i className="fa-solid fa-magnifying-glass"></i></span>
       <input placeholder="Starbucks" type="text" className="form-control" onChange={handleChange} />
     </div>
-
   );
 }
 
